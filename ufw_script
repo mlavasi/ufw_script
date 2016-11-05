@@ -2,11 +2,11 @@
 
 # first we will patch the system 
 
-sudo apt-get update
+echo "y" | sudo apt-get update
 
-sudo apt-get uprade
+echo "y" | sudo apt-get uprade
 
-sudo apt-get dist-upgrade
+echo "y" | sudo apt-get dist-upgrade
 
 #install Ubuntu firewall 
 
