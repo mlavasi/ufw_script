@@ -1,0 +1,10 @@
+# this script will automatically engage UFW and block all ports apart from port 21, 443 and 80.
+
+# first we will patch the system to enure we are not running outdated apps & plugins
+
+sudo apt-get update
+
+sudo apt-get uprade
+
+sudo apt-get dist-upgrade
+
