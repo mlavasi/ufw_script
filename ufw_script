@@ -4,13 +4,13 @@
 
 
 
-echo "y" | sudo apt-get update
+sudo apt-get update -Y
 
-echo "y" | sudo apt-get uprade
+sudo apt-get uprade -Y
 
-echo "y" | sudo apt-get dist-upgrade
+sudo apt-get dist-upgrade -Y
 
 #install Ubuntu firewall 
 
-sudo apt-get install ufw
+echo "y" sudo apt-get install ufw
 
