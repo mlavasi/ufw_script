@@ -1,6 +1,6 @@
 # This script will patch, update and automatically engage UFW for Debian based Linux systems.
-# Adapt the script as necessary for you hosts needs. The default configuration Allows ports 
-# 22, 80, and 443 (webhosting) but can easily be configured but removing “#” from lines as 
+# Adapt the script as necessary for your hosts needs. The default configuration Allows ports 
+# 22, 80, and 443 (webhosting) but can easily be configured by removing “#” from lines as 
 # you see fit.
 
 
@@ -20,7 +20,7 @@ then
 	echo "y" | sudo apt-get install ufw
 fi
 
-# Allow ssh through the firewall before it is enabled to prevent disconnect
+# Allow ssh through the firewall before it is enabled to prevent disconnect (if your connected via ssh)
 
 sudo ufw allow ssh 
 
