@@ -1,16 +1,22 @@
-# this script will automatically engage UFW and block all ports apart from port 21, 443 and 80.
+# this script will patch and update ubuntu and automatically engage UFW and block all 
+# incoming connections
+# 
 
 # first we will patch the system 
 
 echo "y" | sudo apt-get update
 
-echo "y" | sudo apt-get uprade
+echo "y" | sudo apt-get upgrade
 
 echo "y" | sudo apt-get dist-upgrade
 
-#install Ubuntu firewall 
+#Check ufw is installed and if not install Uncomplicated firewall (ufw)
 
-echo "y" | sudo apt-get install ufw
+which ufw
+if [ $? != 0 ] 
+then
+	echo "y" | sudo apt-get install ufw
+fi
 
 # Allow ssh through the firewall before it is enabled to prevent disconnect
 
@@ -37,3 +43,11 @@ sudo ufw allow 443
 #sudo ufw enable ftp
 
 #sudo ufw enable 21
+
+sudo ufw status
+
+print "check out www.darkersec.com/blog"
+
+# if you've not patch your system in while this could take up to 20 minutes
+# so have a cuppa tea and when you return check the output to confirm that
+# the firewall is active and the relevent ports are open.
