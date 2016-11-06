@@ -46,7 +46,7 @@ sudo ufw allow 443
 
 sudo ufw status | grep -E '22.*ALLOW|80.*ALLOW|443.*ALLOW'
 
-print "check out www.darkersec.com/blog"
+echo "check out www.darkersec.com/blog"
 
 # if you've not patch your system in while this could take up to 20 minutes
 # so have a cuppa tea and when you return check the output to confirm that
