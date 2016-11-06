@@ -12,3 +12,28 @@ echo "y" | sudo apt-get dist-upgrade
 
 echo "y" | sudo apt-get install ufw
 
+# Allow ssh through the firewall before it is enabled to prevent disconnect
+
+sudo ufw allow ssh 
+
+sudo ufw allow 22
+
+# enable Ubuntu firewall
+
+echo "y" | sudo ufw enable
+
+# Allow http and https
+
+sudo ufw allow http 
+
+sudo ufw allow http
+
+sudo ufw allow 80
+
+sudo ufw allow 443
+
+#To enable ftp delete "#" from the beggining of the lines below
+
+#sudo ufw enable ftp
+
+#sudo ufw enable 21
