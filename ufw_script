@@ -44,7 +44,7 @@ sudo ufw allow 443
 
 #sudo ufw enable 21
 
-sudo ufw status
+sudo ufw status | grep -E '22.*ALLOW|80.*ALLOW|443.*ALLOW'
 
 print "check out www.darkersec.com/blog"
 
